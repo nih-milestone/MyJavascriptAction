@@ -57,8 +57,8 @@ jobs:
         id: test-action
         uses: ./
         with:
-          build-identifier: "xpco-24.1"
-  
+          build-identifier: 'xpco-24.1'
+
       - name: Print Output
         id: output
         run: |
