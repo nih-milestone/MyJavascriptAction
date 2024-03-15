@@ -1,23 +1,21 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: 'heart'
-  color: 'red'
+name: 'Build number service'
+description:
+  'Provides unique, always incrementing build numbers in a thread-safe manner'
+author: 'Milestone Systems A/S'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  build-identifier:
+    description: 'The identifier for which the next build number is desired'
     required: true
-    default: '1000'
 
 # Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
+  build-identifier:
+    description: 'The build identifier provided as input to the action'
+  build-number:
+    description:
+      'The (next) unique build-number for the provided build identifier'
 
 runs:
   using: node20
